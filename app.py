@@ -24,7 +24,6 @@ if uploaded_file is not None:
     st.info("Making prediction...")
     img_array = preprocess_img(img_path)
 
-    # Ensure model is built (important in Keras 3)
     _ = model(img_array)
 
     prediction = model.predict(img_array)[0][0]
